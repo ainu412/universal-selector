@@ -1,19 +1,25 @@
 #pragma once
 #include <iostream>
 using namespace std;
-
+/*
+附1：优化Student类, 属性变成 char *pname, 构造函数里面 分配内存
+附2：优化Student类,析构函数 释放pname指向的内存空间
+附3：优化Student类,避免浅赋值/浅拷贝 重载= 和 重写拷贝构造函数
+附4：思考 Student * 类成员如何操作
+*/
 class Beauty
 {
 public:
-	Beauty(int age = 0, string name = "") {//指针的浅拷贝和深拷贝才有差别->浅拷贝指向同一块内存,深拷贝指向不同内存
-		this->age = age;				   //此次数据不含指针,故无需再手动定义深拷贝
-		this->name = name;
-	}
+	Beauty(int age = 0, const char* name = "");
+	~Beauty();//数据成员有指针就必须写析构函数
+	Beauty(const Beauty& src);//数据成员有指针就必须写拷贝构造函数
+	Beauty& operator=(const Beauty& src);//数据成员有指针就必须写赋值构造函数
 
 	friend ostream& operator<<(ostream& os, const Beauty& beauty);
+
 private:
 	int age;
-	string name;
+	char* name;
 };
 
 ostream& operator<<(ostream& os, const Beauty& beauty);
