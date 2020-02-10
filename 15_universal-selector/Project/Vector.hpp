@@ -2,6 +2,8 @@
 
 template<typename T>
 inline Vector<T>::Vector(int cnt) {
+
+
 	if (cnt > 0) {
 		this->cnt = cnt;
 	}
@@ -38,9 +40,7 @@ inline int Vector<T>::getCnt()
 template<typename T>
 inline Vector<T>::Vector(Vector& src)
 {
-	if (p) {
-		delete p;
-	}
+
 	p = new T[src.cnt];
 	cnt = src.cnt;
 	for (int i = 0; i < src.cnt; i++) {
@@ -52,7 +52,7 @@ template<typename T>
 inline Vector<T>& Vector<T>::operator=(Vector& src)
 {
 	if (p) {
-		delete p;
+		delete[] p;
 	}
 	p = new T[src.cnt];
 	cnt = src.cnt;

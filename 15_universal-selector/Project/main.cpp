@@ -1,5 +1,14 @@
 #include "Vector.hpp"
 
+#ifdef _DEBUG
+#define New   new(_NORMAL_BLOCK, __FILE__, __LINE__)
+#endif
+
+#define CRTDBG_MAP_ALLOC  
+#include <stdlib.h>  
+#include <crtdbg.h> 
+
+#include <vld.h>
 int main() {
 
 	Vector<Beauty*> btV(2);
@@ -35,5 +44,7 @@ int main() {
 	intV2 = intV;
 	cout << intV2;
 
+	_CrtDumpMemoryLeaks();
+	system("pause");
 	return 0;
 }
