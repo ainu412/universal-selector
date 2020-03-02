@@ -351,3 +351,4 @@ MigrationBackup/
 *.vcxproj
 *.filters
 *.sln
+/15_universal-selector/Exception handling mechanism/dest.txt
