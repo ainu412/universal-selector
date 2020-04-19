@@ -21,7 +21,7 @@ cnt>0 i>=0
 */
 template <typename T>
 class Vector
-{
+{ 
 public:
 	Vector(int cnt = 128);//构造函数(除赋值构造函数)的函数名后不需加<T>
 	~Vector();

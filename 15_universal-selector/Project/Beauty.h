@@ -8,7 +8,7 @@ using namespace std;
 附4：思考 Student * 类成员如何操作
 */
 class Beauty
-{
+{ 
 public:
 	Beauty(int age = 0, const char* name = "");
 	~Beauty();//数据成员有指针就必须写析构函数

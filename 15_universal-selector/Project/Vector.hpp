@@ -67,8 +67,7 @@ ostream& operator<<(ostream& os, const Vector<T>& object)
 {
 	for (int i = 0; i < object.cnt; i++) {
 		os << object.p[i] << "\t";//若存储值,可直接打印;若存储对象,无法直接打印->可直接创建os<<Beauty.name<<" age
-	}
-	os << endl;
+	}os << endl;
 
 	return os;
 }

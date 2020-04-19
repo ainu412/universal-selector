@@ -1,15 +1,15 @@
-#include "Beauty.h"
+ï»¿#include "Beauty.h"
 
 ostream& operator<<(ostream& os, const Beauty& beauty)
 {
-	os << "ÃÀÅ®µÄÐÕÃûÎª:" << beauty.name 
-	   << ",ÄêÁäÎª:" << beauty.age << endl;
+	os << "ç¾Žå¥³çš„å§“åä¸º:" << beauty.name 
+	   << ",å¹´é¾„ä¸º:" << beauty.age << endl;
 	return os;
 }
 
 Beauty::Beauty(int age, const char* name) :age(age)
-{//Ö¸ÕëµÄÇ³¿½±´ºÍÉî¿½±´²ÅÓÐ²î±ð->Ç³¿½±´Ö¸ÏòÍ¬Ò»¿éÄÚ´æ,Éî¿½±´Ö¸Ïò²»Í¬ÄÚ´æ
- //´Ë´ÎÊý¾Ý³ÉÔ±Èô²»º¬Ö¸Õë,¹ÊÎÞÐèÔÙÊÖ¶¯¶¨ÒåÉî¿½±´
+{//æŒ‡é’ˆçš„æµ…æ‹·è´å’Œæ·±æ‹·è´æ‰æœ‰å·®åˆ«->æµ…æ‹·è´æŒ‡å‘åŒä¸€å—å†…å­˜,æ·±æ‹·è´æŒ‡å‘ä¸åŒå†…å­˜
+ //æ­¤æ¬¡æ•°æ®æˆå‘˜è‹¥ä¸å«æŒ‡é’ˆ,æ•…æ— éœ€å†æ‰‹åŠ¨å®šä¹‰æ·±æ‹·è´
 
 	/*int len = name.length() + 1;
 	this->name = new char[len];
